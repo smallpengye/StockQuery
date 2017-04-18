@@ -1,0 +1,114 @@
+
+.outmostlayer{
+    background-size:auto;
+    background-image: url(../img/1.jpg);
+    margin:auto;
+    background-color:#F3F3F4;
+    width:auto;
+    padding:10px;
+    height:720px;
+}
+.loginindex{
+    max-width: 30%;
+    height:  500px;
+    top: 50px;
+    margin: auto;
+}
+.loginname{
+    color:#F3F3F4 ;
+    margin: auto;
+    max-width: 60%;
+    height: 80px;
+
+}
+.loginname-middle{
+    max-width:68%;
+    height: 80px;
+    align: left;
+
+}
+
+.loginname-Popup{
+    max-width: 32%;
+    height: 80px;
+align:right;
+}
+
+#ying{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    left:0px;
+    top:0px;
+    display: none;
+}
+
+#go{background-color: orange;color: white;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+    height: 26px;
+    margin-left: 100px;
+}
+
+#box{
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+#denglv{width: 400px;
+    height: 100px;
+    border: 2px solid #9C9C9C;
+    background-color: white;
+    border-radius: 5px;
+    margin: 200px auto;
+}
+
+#ying a{position: relative;
+    top: 10px;
+    left: 360px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid red;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+#ying2{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    left:0px;
+    top:0px;
+    display: none;
+}
+#denglv2{width: 400px;
+    height: 100px;
+    border: 2px solid #9C9C9C;
+    background-color: white;
+    border-radius: 5px;
+    margin: 200px auto;
+}
+
+#ying2 a{position: relative;
+    top: 10px;
+    left: 360px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid red;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+*{margin: 0;padding: 0;}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QueryStock</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/mystyle.css" type="text/css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../js/necessary/jquery.min.js"></script>
+    <script src="../js/necessary/bootstrap.min.js"></script>
+    <script src="../js/necessary/angular-1.0.1.min.js"></script>
+    <script src="../js/necessary/jquery.form.js"></script>
+    <script src="../js/necessary/echarts.min.js"></script>
+    <script src="../js/manger.js"></script>
+
+</head>
+<body ng-app="myapp2" >
+<div class="container-fluid" style="height:100%;background-color: lightyellow" ng-controller="manger">
+
+    <!--上面-->
+    <div class="row" style="background-color:lightyellow;height:10%">
+        <div class="col-lg-4 col-lg-offset-3" style="color:white">
+            <h1 style="color: #0f0f0f"><b>用户中心(管理)</b></h1>
+        </div>
+        <div class="col-lg-3 col-lg-offset-2" style="color:white">
+            <h5  style="padding-top: 30px;color: #0f0f0f" ng-click="goindex()">主页</h5>
+            <a href="/logout">退出</a>
+        </div>
+
+    </div>
+    <!--左边-->
+    <div class="col-lg-3" style="color: #0f0f0f; height:90%;background-color: lightyellow">
+        <div class="container-fluid" style="height:20%">
+            <form id="myform" method="POST" enctype="multipart/form-data" action="/upload">
+                <h3>上传我的股票数据</h3> <input type="file" name="file"><br />
+                <!--Name: <input type="text" name="name"/><br />-->
+                <!--<input type="submit"value="Upload"> Press here to upload the file!-->
+                <button type="button"  ng-click="submit()">确认</button>
+            </form>
+        </div>
+        <div class="container-fluid" style="position:absolute;height:400px;overflow-y:auto;">
+            <h3>我收藏的股票</h3>
+            <table  class="table" style="background-color: lightyellow">
+                <tr ng-repeat="stock in stocks">
+                    <td>{{stock}}</td>
+                    <td><button class="btn btn-default" type="submit" ng-click="canclecollect($index)">取消收藏</button></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <!--右边-->
+    <div class="col-lg-9"   id="" style="height:90%;color: #0f0f0f; background-color: lightyellow">
+        <div style="height:800px;">
+            <table class="table table-striped">
+                <thead>
+                <td>用户名</td>
+                <td>用户权限</td>
+                </thead>
+                <tr ng-repeat="user in users">
+                    <td>{{user.name}}</td>
+                    <td>
+                    <select name="select" ng-model="user.roles">
+                        <option value="admin">管理员</option>
+                        <option value="user">用户</option>
+                        <option value="member">会员</option>
+                    </select>
+                    </td>
+                    <td><button ng-click="saveroles($index)">保存</button></td>
+                    <td><button ng-click="deleteroles($index)">删除用户</button></td>
+                </tr>
+                <!--<tr ng-repeat="user in users">-->
+                    <!--<td>{{user.name}}</td>-->
+                    <!--<td>{{user.roles}}</td>-->
+                    <!--<td><button ng-click="changroles($index)">修改权限</button></td>-->
+                    <!--<td><button ng-click="saveroles($index)">保存</button></td>-->
+                    <!--<td><button ng-click="deleteroles($index)">删除用户</button></td>-->
+                <!--</tr>-->
+            </table>
+        </div>
+
+        <div id="ying">
+            <div id="denglv">
+                <h5 style="text-align: center">是否确认将{{currentname}}权限改为{{currentroles}}</h5>
+                <!--<a id="back" href="#">X</a>-->
+                    <div style="text-align: center">
+                    <button ng-click="confirm()">确定</button>
+                    <button ng-click="cancle()">取消</button>
+                    </div>
+            </div>
+        </div>
+        <div id="ying2">
+            <div id="denglv2">
+                <h5 style="text-align: center">是否确认将用户{{currentname2}}删除</h5>
+                    <!--<a id="back" href="#">X</a>-->
+                    <div style="text-align: center">
+                        <button ng-click="confirm2()">确定</button>
+                        <button ng-click="cancle2()">取消</button>
+                    </div>
+            </div>
+        </div>
+        <!--<div id="go">登陆</div>-->
+    </div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+.outmostlayer{
+	margin:0 auto; 
+	background-color:#F3F3F4;
+    width:auto;
+	padding:10px;
+     height:1000px;	
+}
+.leftstyle{
+    float:left;
+	background-color:#ffffff;
+	border:3px;
+	padding:10px;
+	width:55%;
+	
+}
+.rightstyle{
+	float:right;
+   background-color:#ffffff;
+	border:3px;
+	padding:10px;
+	width:40%;
+}
+.leftstyle2{
+    float:left;
+	background-color:#ffffff;
+	border:3px;
+	padding:10px;
+	width:40%;
+
+	
+}
+.rightstyle2{
+	float:right;
+   background-color:#ffffff;
+	border:3px;
+	padding:10px;
+	width:60%;
+}
+.smallbox{
+	width:100%;
+	background-color:#FFD700;
+	
+}
+.smallleftstyle{
+	float:left;
+	background-color:#ffffff;
+	border:3px;
+	padding:10px;
+	width:30%;
+}
+.smallrightstyle{
+	width:45%;
+	float:right;
+	background-color:#ffffff;
+
+	
+}
+
+.leftstyle-top{
+   
+}
+.smallbox{
+	width:500px;
+	padding:20px 30px 10px 20px;
+	margin:30px;
+}
+
+.smallbutton{
+	height:60px;
+	width:100%;
+	
+}
+.smallbuttonleft{
+	padding:1px 0 0 0;
+	float:left;
+	width:40%;
+	height:55px;
+}
+.samllbuttoncenter{
+	width:20%;
+	height:55px;
+	float:left;	
+	
+}
+.smallbuttonright{
+	width:20%;
+	height:27px;
+	padding:0 30px 0 30px;
+	float:right;
+}
+.searchbar{
+	width:50%;
+	height:45px;
+	
+}
+.inputcontrol{
+   width:300px;
+   height:80px;
+	
+}
+.leftstyl-mid{
+	width:100%;
+}
+.rightstyle-bottom{
+	width:100%;
+}
+.rightstyle-bottomleft{
+	float:left;
+    height:40px;
+	width:45%;
+	margin:0 10px 0 10px;	
+}
+.rightstyle-bottomright{
+	float:left;
+	height:40px;
+	width:45%;
+	margin:0 10px 0 10px;	
+}
+.customrightstyle-bottomright{
+	float:right;
+	height:40px;
+	width:45%;
+	margin:0 10px 0 10px;	
+}
+.rightstyle-bottomleftleft{
+	float:left;
+
+	width:30%;
+	margin:0 0 0 0;	
+}
+.rightstyle-bottomleftright{
+	float:right;
+	width:50%;
+	margin:0 0 0 0;	
+}
+.rightstyle-bottomrightleft{
+	float:left;
+
+	width:30%;
+	margin:0 0 0 4px;	
+}
+.rightstyle-bottomrightright{
+	float:right;
+	width:50%;
+	margin:0 4px 0 0;	
+}
+.rightstyle-bottombox{
+	width:100%;
+	
+}
+.customsmallbox{
+	padding:0 0 0 0px;
+	float:left;
+	width:100%;
+	
+}
+.rightstyle-bottombox2{
+	width:100%;
+	
+}
+.rightstyle-custombottomright{
+	float:right;
+	height:40px;
+	width:45%;
+	margin:0 0;
+}
+/*.table{
+	width:80%;
+    height:500px;
+	margin:0;
+	padding:20px 60px 20px 30px;
+	background-color:#F3F3F4;
+    overflow:scroll;
+}*/
+.rightstyle{
+    float:right;
+	background-color:#ffffff;
+	border:3px;
+	padding:10px;
+	width:40%;	
+}
+.image{
+	float:right;
+    width:200px;
+	height:200px;
+	padding:0 80px 0 0;
+}
+.pername{
+	float:left;
+	width:250px;
+	height:100px;
+    overflow:auto;
+}
+
+/*供应商档案的css*/
+
+.secondlayer{
+	width:98%;
+	margin:0 auto;
+	background-color:#ffffff;
+}
+
+
+
+
+
+
+
+
+
+

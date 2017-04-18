@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QueryStock</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/mystyle.css" type="text/css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../js/necessary/jquery.min.js"></script>
+    <script src="../js/necessary/bootstrap.min.js"></script>
+    <script src="../js/necessary/angular-1.0.1.min.js"></script>
+    <script src="../js/necessary/jquery.form.js"></script>
+    <script src="../js/necessary/echarts.min.js"></script>
+    <script src="../js/userinfo.js"></script>
+
+</head>
+<body ng-app="myapp1" >
+<div class="container-fluid" style="height:100%;background-color: lightyellow" ng-controller="myInfo">
+    <!--上面-->
+    <div class="row" style="background-color:lightyellow;height:10%">
+        <div class="col-lg-4 col-lg-offset-3" style="color:white">
+            <h1 style="color: #0f0f0f"><b>用户中心</b></h1>
+        </div>
+        <div class="col-lg-3 col-lg-offset-2" style="color:white">
+            <h5  style="padding-top: 30px;color: #0f0f0f" ng-click="goindex()">主页</h5>
+            <a href="/logout">退出</a>
+        </div>
+
+    </div>
+    <!--左边-->
+    <div class="col-lg-3" style="color: #0f0f0f; height:90%;background-color: lightyellow">
+        <div class="container-fluid" style="height:20%">
+            <form id="myform" method="POST" enctype="multipart/form-data" action="/upload">
+                <h3>上传我的股票数据</h3> <input type="file" name="file"><br />
+                <!--Name: <input type="text" name="name"/><br />-->
+                <!--<input type="submit"value="Upload"> Press here to upload the file!-->
+                <button type="button"  ng-click="submit()">确认</button>
+            </form>
+        </div>
+        <div class="container-fluid" style="overflow-y:scroll">
+
+            <h3>我收藏的股票</h3>
+            <table  class="table" style="background-color: lightyellow">
+
+                   <tr ng-repeat="stock in stocks">
+                       <td>{{stock}}</td>
+                       <td><button class="btn btn-default" type="submit" ng-click="canclecollect($index)">取消收藏</button></td>
+                   </tr>
+
+            </table>
+        </div>
+
+
+    </div>
+
+
+    <!--右边-->
+    <div class="col-lg-9"   id="" style="height:90%;color: #0f0f0f; background-color: lightyellow">
+      <div style="height:800px;">
+         <!-- <table class="table table-striped">
+              <thead>
+                <td>用户名</td>
+                <td>用户权限</td>
+              </thead>
+              <tr ng-repeat="user in users">
+                  <td>{{user.name}}</td>
+                  <td>{{user.roles}}</td>
+                  <td><button>修改权限</button></td>
+              </tr>
+          </table>-->
+      </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>

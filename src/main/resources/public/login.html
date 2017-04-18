@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="css/mystyle.css" rel="stylesheet" type="text/css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="js/necessary/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="js/necessary/bootstrap.min.js"></script>
+
+    <!--<script src="../js/login.js"></script>-->
+
+    <script>
+        $(document).ready(function () {
+            $("#regBtn").on("click", function () {
+                window.location.href = 'html/register.html'
+            })
+        })
+    </script>
+</head>
+
+<body>
+<div class="outmostlayer">
+    <div class="loginindex" align="center">
+        <div class="loginname" font="宋体" >
+            <h2 class="text-center" color="#F3F3F4">欢迎登录股票查询系统</h2>
+        </div>
+
+        <form action="/login" method="post">
+            <div class="loginname" font="宋体" align="left">
+                用户名<input type="text" class="form-control" align="left"  name="username" placeholder="username">
+            </div>
+            <div class="loginname" font="宋体" align="left">
+                用户密码<input type="password" class="form-control"  align="left" name="password" placeholder="password">
+            </div>
+            <input type="submit" value="登录"  class="btn btn-info"/>
+            <input id="regBtn" type="button" value="注册" class="btn btn-info"/>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

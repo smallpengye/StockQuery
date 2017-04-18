@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forcaseStock</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/mystyle.css" type="text/css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../js/necessary/jquery.min.js"></script>
+    <script src="../js/necessary/bootstrap.min.js"></script>
+    <script src="../js/necessary/angular-1.0.1.min.js"></script>
+    <script src="../js/necessary/echarts.min.js"></script>
+    <script src="../js/forcaseStock.js"></script>
+
+</head>
+<body  ng-app="myapp3" STYLE="height:800px">
+<div class="container-fluid" style="height:100%;background-color: lightyellow" ng-controller="forcaseStock">
+    <!--上面-->
+    <div class="row" style="background-color:black;height:12%">
+        <div class="col-lg-4 col-lg-offset-3" style="color:white">
+            <h1><b>股票预测</b></h1>
+        </div>
+        <div class="col-lg-3 col-lg-offset-2" style="color:white">
+            <h5  style="padding-top: 30px;color:white" ng-click="goindex()">主页</h5>
+            <a href="/logout">退出</a>
+        </div>
+    </div>
+    <!--左边-->
+    <div class="col-lg-3" style="olor: #0f0f0f; height:88%;background-color: lightyellow">
+        <div style="position:absolute; height:200px;">
+            <h3>预测时间段</h3>
+            <h5>开始时间<input class="form-control" type="date" value="" ng-model="startdate"/></h5>
+            <h5>结束时间<input class="form-control" type="date" value="" ng-model="enddate"/></h5>
+            <form class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" ng-model="stockname" class="form-control" id="" placeholder="需要预测的证券">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary"  ng-click="forcaseStock()">预测</button>
+            </form>
+
+        </div>
+    </div>
+    <!--右边-->
+    <div class="col-lg-9"   id="myecharts2" style="height:88%;color: #0f0f0f; background-color: lightyellow">
+        <!--<div   style="width:100%;height:100%;"></div>-->
+    </div>
+</div>
+
+</body>
+</html>
